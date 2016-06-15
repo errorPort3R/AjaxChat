@@ -14,7 +14,7 @@ public class Main
     public static void createTables(Connection conn) throws SQLException
     {
         Statement stmt = conn.createStatement();
-        stmt.execute("CREATE TABLE IF NOT EXISTS messages (id IDENTITY, author VARCHAR, messages VARCHAR)");
+        stmt.execute("CREATE TABLE IF NOT EXISTS messages (id IDENTITY, author VARCHAR, text VARCHAR)");
     }
 
     public static void insertMessage(Connection conn, Message msg) throws SQLException
@@ -87,6 +87,6 @@ public class Main
                     //delete message in database
                     return"";
                 }
-        )
+        );
     }
 }
